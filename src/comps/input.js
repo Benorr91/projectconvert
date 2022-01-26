@@ -23,7 +23,7 @@ function Input(props) {
     return (
         < div className='my-5 w-50 mx-auto'>
             <input className='form-control w-50' defaultValue={1} ref={inputRef} type="number" onChange={convert} />
-            <select className='form-select w-50' onChange={convert}  ref={selectRef}>
+            <select className='form-select w-50  select	' onChange={convert}  ref={selectRef}>
                 <option value="" >Choose Coin</option>
 
                 {resultCoinsName.map((item, i) => {
@@ -33,7 +33,7 @@ function Input(props) {
                 })}
 
             </select>
-            <select className='form-select w-50 ' onChange={convert}  ref={selectRef2}>
+            <select className='form-select w-50  select' onChange={convert}  ref={selectRef2}>
                 <option value="" >Choose Coin</option>
                 {resultCoinsName.map((item, i) => {
                     return (
