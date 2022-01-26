@@ -16,3 +16,12 @@ h1{
     font-size: 3rem;
     font-weight: bolder;
 }
+.clock{
+    color: #e0dfdc;
+  
+    letter-spacing: .1em;
+    color: #FFFFFF;
+
+    text-shadow: 2px 2px 0 #4074b5, 2px -2px 0 #4074b5, -2px 2px 0 #4074b5, -2px -2px 0 #4074b5, 2px 0px 0 #4074b5, 0px 2px 0 #4074b5, -2px 0px 0 #4074b5, 0px -2px 0 #4074b5;
+
+}
