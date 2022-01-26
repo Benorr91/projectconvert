@@ -16,7 +16,7 @@ function Input(props) {
 
     const convert = () => {
         setAmount((inputRef.current.value / selectRef.current.value) * selectRef2.current.value)
-        var value = selectRef2.current.options[selectRef2.current.selectedIndex].innerHTML;
+        const value = selectRef2.current.options[selectRef2.current.selectedIndex].innerHTML;
         props.CollectConvert(amount,value)
         console.log(value);
         // console.log(selectRef2.current.options[0].innerHTML);
