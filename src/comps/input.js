@@ -19,6 +19,7 @@ function Input(props) {
     const convert = () => {
         setAmount((inputRef.current.value / selectRef.current.value) * selectRef2.current.value)
         props.CollectConvert(amount)
+      
 
     }
 

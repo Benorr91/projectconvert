@@ -7,7 +7,7 @@ let{convert}=props;
         <div className='text-center scoreDiv w-50 mx-auto p-3 my-4'>
             {convert?
             <>
-            Your convert {convert.toLocaleString()}
+            Your convert {convert.toLocaleString()} 
             </>
                 :""}
         </div> 

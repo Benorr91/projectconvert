@@ -6,6 +6,7 @@ import Score from './score';
 function ExchangeApp(props) {
     const [ar, setAr] = useState([]);
     const [convert, setConvert] = useState(0);
+    const [currency, setCurrency] = useState("");
     const date=new Date;
 
     useEffect(() => {
@@ -17,8 +18,9 @@ function ExchangeApp(props) {
         // console.log(resp.data.data);
         setAr(resp.data.data);
     }
-    const CollectConvert = (amount) => {
+    const CollectConvert = (amount,currency) => {
         setConvert(amount);
+        setCurrency(currency)
     }
 
 
@@ -26,7 +28,7 @@ function ExchangeApp(props) {
         <div className='container '>
             <h1>Currency conversion </h1>
             <Input ar={ar} CollectConvert={CollectConvert} />
-            <Score convert={convert} />
+            <Score convert={convert} currency={currency}/>
             <div className='col-md-6 mx-auto text-center  clock my-5'><strong>{date.toString()}</strong></div>
         </div>
     )
