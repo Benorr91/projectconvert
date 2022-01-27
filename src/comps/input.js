@@ -1,15 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { getSymbolFromCode } from "currency-code-symbol-map";
 function Input(props) {
-    // const sortKeys = (obj) => {
-    //     return Object.assign(...Object.entries(obj).sort().map(([key, value])=> {
-            
-    //         return {
-    //             [key]: value
-    //         }
-    //     }));
-    // };
-    // sortKeys(props.ar)
+  
     const resultValues = Object.values(props.ar)
     const resultCoinsName = Object.keys(props.ar)
     let selectRef = useRef();
@@ -27,7 +19,7 @@ function Input(props) {
         setAmount((inputRef.current.value / selectRef.current.value) * selectRef2.current.value)
         const value = selectRef2.current.options[selectRef2.current.selectedIndex].innerHTML;
         props.CollectConvert(amount,value)
-        console.log(value);
+        // console.log(value);
         //  console.log(props.ar.sort());
 
     }
@@ -70,3 +62,11 @@ function Input(props) {
 }
 
 export default Input
+// const sortKeys = (obj) => {
+//     return Object.assign(...Object.entries(obj).sort().map(([key, value])=> {
+        
+//         return {
+//             [key]: value
+//         }
+//     }));
+// };
