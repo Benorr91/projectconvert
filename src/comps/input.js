@@ -6,8 +6,6 @@ function Input(props) {
     const resultCoinsName = Object.keys(props.ar)
     let selectRef = useRef();
     let selectRef2 = useRef();
-
-
     let inputRef = useRef();
     let [amount, setAmount] = useState(0);
     useEffect(() => {
