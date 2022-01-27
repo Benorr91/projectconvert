@@ -7,9 +7,19 @@ function ExchangeApp(props) {
     const [ar, setAr] = useState([]);
     const [convert, setConvert] = useState(0);
     const [currency, setCurrency] = useState("");
-    const date=new Date;
-
+    const [clock, setClock] = useState();
+    const [fullDate, setFullDate] = useState( );
+    
+    
+    
     useEffect(() => {
+        setInterval(()=>{
+            const date= new Date();
+            setClock(date.toLocaleString())
+
+        },1000)
+        let tempDate=new Date()
+        setFullDate(tempDate)
         doApi();
     }, [])
     const doApi = async () => {
@@ -29,7 +39,8 @@ function ExchangeApp(props) {
             <h1>Currency conversion </h1>
             <Input ar={ar} CollectConvert={CollectConvert} />
             <Score convert={convert} currency={currency}/>
-            <div className='col-md-6 mx-auto text-center  clock my-5'><strong>{date.toString()}</strong></div>
+            <div className='col-md-6 mx-auto text-center  clock my-5'><strong>{clock}</strong></div>
+            {/* <p>{fullDate}</p> */}
         </div>
     )
 }
