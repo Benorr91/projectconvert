@@ -34,8 +34,8 @@ function Input(props) {
 
     return (
         < div className='my-5 w-50 mx-auto'>
-            <input className='form-control w-50' defaultValue={1} ref={inputRef} type="number" onChange={convert} />
-            <select className='form-select w-50  select	' onChange={convert} ref={selectRef}>
+            <input className='form-control w-75' defaultValue={1} ref={inputRef} type="number" onChange={convert} />
+            <select className='form-select w-75  select	' onChange={convert} ref={selectRef}>
                 <option value="" >Choose Coin</option>
 
                 {resultCoinsName.map((item, i) => {
@@ -55,7 +55,7 @@ function Input(props) {
                 }}><i className="fa fa-arrows-v" aria-hidden="true"></i></button>
             </div>
 
-            <select className='form-select w-50  select' onChange={convert} ref={selectRef2}>
+            <select className='form-select w-75  select' onChange={convert} ref={selectRef2}>
                 <option value="" >Choose Coin</option>
                 {resultCoinsName.map((item, i) => {
                     return (
