@@ -12,7 +12,6 @@ function Input(props) {
     // sortKeys(props.ar)
     const resultValues = Object.values(props.ar)
     const resultCoinsName = Object.keys(props.ar)
-    //  resultCoinsName.sort();
     let selectRef = useRef();
     let selectRef2 = useRef();
 
