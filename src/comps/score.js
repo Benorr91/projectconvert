@@ -9,7 +9,7 @@ let{convert,currency}=props;
             <>
             Your convert {convert.toLocaleString()} {currency} 
             </>
-                :""}
+                :"You not Convert Nothing"}
         </div> 
     )
 }
