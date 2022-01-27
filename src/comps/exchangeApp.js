@@ -19,7 +19,7 @@ function ExchangeApp(props) {
 
         },1000)
         let tempDate=new Date()
-        setFullDate(tempDate)
+        setFullDate(tempDate.toISOString())
         doApi();
     }, [])
     const doApi = async () => {
@@ -39,7 +39,7 @@ function ExchangeApp(props) {
             <h1>Currency conversion </h1>
             <Input ar={ar} CollectConvert={CollectConvert} />
             <Score convert={convert} currency={currency}/>
-            <div className='col-md-6 mx-auto text-center  clock my-5'><strong>{clock}</strong></div>
+            <div className='col-md-6 mx-auto text-center  clock my-5'><strong>{clock} </strong></div>
             {/* <p>{fullDate}</p> */}
         </div>
     )
