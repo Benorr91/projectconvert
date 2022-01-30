@@ -14,10 +14,13 @@ function Input(props) {
     }, [amount])
 
     const convert = () => {
-        setAmount((inputRef.current.value / selectRef.current.value) * selectRef2.current.value)
         const value = selectRef2.current.options[selectRef2.current.selectedIndex].innerHTML;
+        // const value2 = selectRef.current.options[selectRef.current.selectedIndex].innerHTML;
+        // if(value2=="BTC ₿"?selectRef.current.value/1000:selectRef.current.value);
+        // console.log(value=="BTC ₿"?amount/1000:"");
+        setAmount((inputRef.current.value / selectRef.current.value) * selectRef2.current.value)
+    
         props.CollectConvert(amount,value)
-        // console.log(value);
         //  console.log(props.ar.sort());
 
     }
