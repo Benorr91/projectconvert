@@ -2,9 +2,6 @@ import React, { useEffect, useRef, useState } from 'react';
 import { getSymbolFromCode } from "currency-code-symbol-map";
 function Input(props) {
     
-    let [ar, setAr] = useState([]);
-    const usd={"USD":1}
-   
     // console.log(ar);
     const resultValues = Object.values(props.ar)
     const resultCoinsName = Object.keys(props.ar)
