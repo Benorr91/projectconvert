@@ -1,8 +1,19 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { getSymbolFromCode } from "currency-code-symbol-map";
+
+const sortByPosition = obj => {
+    const order = [], res = {};
+    Object.keys(obj).forEach(key => {
+       return order[obj[key]['position'] - 1] = key;
+    });
+    order.forEach(key => {
+       res[key] = obj[key];
+    });
+    return res;
+ }
+
 function Input(props) {
     
-    // console.log(ar);
     const resultValues = Object.values(props.ar)
     const resultCoinsName = Object.keys(props.ar)
     let selectRef = useRef();
