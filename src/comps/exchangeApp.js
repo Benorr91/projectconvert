@@ -26,6 +26,7 @@ function ExchangeApp(props) {
         let url = "https://freecurrencyapi.net/api/v2/latest?apikey=f2dce500-45f0-11ec-9860-7954a32a920b"
         let resp = await axios.get(url);
         console.log(resp.data.data);
+        resp.data.data.USD=1;
         setAr(resp.data.data);
     }
     const CollectConvert = (amount,currency) => {
