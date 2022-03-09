@@ -1,16 +1,16 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { getSymbolFromCode } from "currency-code-symbol-map";
 
-const sortByPosition = obj => {
-    const order = [], res = {};
-    Object.keys(obj).forEach(key => {
-       return order[obj[key]['position'] - 1] = key;
-    });
-    order.forEach(key => {
-       res[key] = obj[key];
-    });
-    return res;
- }
+// const sortByPosition = obj => {
+//     const order = [], res = {};
+//     Object.keys(obj).forEach(key => {
+//        return order[obj[key]['position'] - 1] = key;
+//     });
+//     order.forEach(key => {
+//        res[key] = obj[key];
+//     });
+//     return res;
+//  }
 
 function Input(props) {
     
@@ -27,11 +27,7 @@ function Input(props) {
 
     const convert = () => {
         const value = selectRef2.current.options[selectRef2.current.selectedIndex].innerHTML;
-        // const value2 = selectRef.current.options[selectRef.current.selectedIndex].innerHTML;
-        // if(value2=="BTC ₿"?selectRef.current.value/1000:selectRef.current.value);
-        // console.log(value=="BTC ₿"?amount/1000:"");
         setAmount((inputRef.current.value / selectRef.current.value) * selectRef2.current.value)
-    
         props.CollectConvert(amount,value)
         //  console.log(props.ar.sort());
 
